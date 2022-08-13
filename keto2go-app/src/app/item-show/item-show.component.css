@@ -1,0 +1,48 @@
+
+/* You can add global styles to this file, and also import other style files */
+@media (min-width: 992px) {
+    .example-spacer { flex: 1 1 auto; }
+    .align-right{ display:flex; justify-content: flex-end; }
+    ul{ list-style-type: none; }
+    li{ display: inline-block;  margin-right: 1rem; }
+    
+
+}
+
+@media (max-width: 991px) and (min-width: 490px) {
+    .example-spacer { flex: 1 1 auto; }
+    .align-right{ display:flex; justify-content: flex-end; }
+    ul{ list-style-type: none; }
+    li{ display: inline-block;  margin-right: 1rem; }
+    .menu-back{
+        
+        background-image: url('../../assets/images/keto-back.png');
+        background-repeat: no-repeat;
+        padding: 40px 40px;
+        background-position: center;
+         
+  
+    }   
+    
+}
+
+@media (max-width: 489px)  and (min-width: 31px) {
+
+    .menu-back{
+        
+        background-image: url('../../assets/images/keto-back.png');
+        background-repeat: no-repeat;
+        padding: 40px 40px;
+        background-position: center;
+         
+  
+    }   
+
+    .example-spacer { flex: 1 1 auto; }
+
+ul{ list-style-type: none;
+    margin-left: -30px;}
+li{ display: inline-block;  margin-right: 0.8rem; }
+
+
+}

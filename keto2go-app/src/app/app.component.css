@@ -1,0 +1,5 @@
+:host {
+    height: 100%;
+  }
+  li{	display: inline-block;vertical-align: top; padding-right:1rem;}
+ul{margin:0;padding:0}

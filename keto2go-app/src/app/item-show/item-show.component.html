@@ -1,0 +1,28 @@
+<div class="row menu-back" >
+    <div class="col-xs-4">
+
+    </div>
+    <div class="col-xs-4" >
+      
+        <h1 class="text-center"><b>MENU</b></h1>
+    </div>
+    <div class="col-xs-4">
+
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+        <ul>
+
+            <li *ngFor="let recipe of recipes" >
+             <app-item-show-ob [recipe]= recipe ></app-item-show-ob>
+           </li>
+         
+         </ul>
+    </div>
+    <hr>
+    <hr>
+  </div>
+  <hr>
+  

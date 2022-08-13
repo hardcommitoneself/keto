@@ -1,0 +1,139 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="navbar-header">
+
+  <!---           
+    <ul type="button" class="navbar-light navbar-toggle"> 
+    <li *ngIf="isAuthenticated">
+      <a style="cursor: pointer;" (click)="onLogout()"><i class="fa fa-fw fa-user" style="font-size: 24px;"></i></a>
+    </li>
+  </ul>  
+  -->
+
+  <ul type="button" class="navbar-light navbar-toggle"> 
+
+
+    <li class="dropdown" routerLinkActive="active" appDropdown *ngIf="!isAuthenticated">
+      <a class="dropdown-toggle  chico" 
+        ><span></span
+          ><img class="cart-image" src="../../assets/images/cart-black.png" height="24"></a>       
+   </li>
+
+
+
+
+
+    <li class="dropdown" routerLinkActive="active" appDropdown *ngIf="isAuthenticated" (click)="calcCartTotal()">
+      <a style="cursor: pointer;" class="dropdown-toggle  chico" role="button"
+        ><span class="badgets">{{produ.length}}  </span
+          ><img class="cart-image" src="../../assets/images/cart2-keto.png" height="22"></a>       
+      <ul class="dropdown-menu mobileD">
+        <li  routerLinkActive="active" *ngFor="let product of (products | async).products; let i = index" >
+          <a style="cursor: pointer;" routerLink="/products-list"> {{ product.name }} ({{ product.amount }})</a>
+        </li>
+        <li  routerLinkActive="active" >
+          <a style="cursor: pointer;" routerLink="/products-list"><strong>Total: </strong> {{ cartTotal | currency:'USD' }}</a>
+        </li>
+        <li  routerLinkActive="active" >
+          <a style="cursor: pointer;" routerLink="/products-list"><strong>View Cart</strong> <span></span></a>
+        </li>
+      </ul>
+    </li>
+ 
+  
+  </ul>
+
+
+
+  <a routerLink="/" class="navbar-brand"><span><img
+    class="logo"
+    id="icon-user"
+    src="../assets/images/logo-mini.png"
+    alt="icon user"
+    draggable="false"
+    height="40"
+/></span>   Espace Keto2go</a>
+
+
+  
+</div>
+
+
+
+<div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active" *ngIf="isAuthenticated">
+          <a routerLink="/item-show">Epicerie</a>
+        </li>
+        <li routerLinkActive="active" *ngIf="isAuthenticated">
+          <a routerLink="/recipes">Edit Products</a>
+        </li>
+        <li routerLinkActive="active" *ngIf="isAuthenticated">
+          <a routerLink="/shopping-list">Ingredients List</a>
+        </li>
+        <!--
+        <li routerLinkActive="active" *ngIf="isAuthenticated">
+          <a routerLink="/products-list">Shopping cart</a>
+        </li>      
+            -->  
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+ 
+        <li class="dropdown" routerLinkActive="active" appDropdown *ngIf="isAuthenticated" >
+          <a style="cursor: pointer;" class="dropdown-toggle" role="button" *ngIf="collapsed" (click)="calcCartTotal()"
+          ><span class="badgets">{{produ.length}}</span
+            ><img class="cart-image" src="../../assets/images/cart2-keto.png" height="22"></a>       
+          <ul class="dropdown-menu">
+            <li  routerLinkActive="active" *ngFor="let product of (products| async).products; let i = index" >
+              <a style="cursor: pointer;" routerLink="/products-list"> {{ product.name }} ({{ product.amount }})</a>
+            </li>
+            <li  routerLinkActive="active" >
+              <a style="cursor: pointer;" routerLink="/products-list">   View Cart</a>
+            
+            </li>
+            <li  routerLinkActive="active" >
+              <a style="cursor: pointer;" routerLink="/products-list">   <strong>Total</strong> {{ cartTotal | currency:'USD' }}</a>
+            
+            </li>
+          </ul>
+        </li>
+          <!-- 
+
+              <li *ngIf="isAuthenticated">
+          <a style="cursor: pointer;" (click)="onLogout()"><i class="fa fa-fw fa-user" style="font-size: 24px;"></i></a>
+        </li>
+          
+          -->
+  
+      </ul>
+</div>
+
+
+  <!---
+      <ng-template #notlogin>
+        <li routerLinkActive="active" *ngIf="!isAuthenticated">
+          <button type="button" class="btn btn-outline-light" routerLink="/auth"
+            >
+            Login 
+            <img
+            id="icon-user"
+            src="../assets/images/keto-icon-user-black-total.png"
+            alt="icon user"
+            draggable="false"
+            height="16"
+        /></button>
+        </li>
+  --->
+
+
+  <ng-template #loadingi>
+    <p>Shows w</p>
+  
+  </ng-template>
+
+
+  <div class="navbar-bottom" routerLinkActive="active" *ngIf="isAuthenticated">
+    <a routerLink="/item-show"><img src="../../assets/images/avocado-white.png" height="24"> <span class="menu-title">MENU</span></a>
+    <a routerLink="/item-show"><img  routerLink="/products-list" src="../../assets/images/keto-lunch.png" height="24"> <span class="menu-title">ÉPICERIE</span></a>
+    <a routerLink="/item-show"><img   src="../../assets/images/salat.png" height="24"> <span class="menu-title">K2GO</span></a>
+    <a (click)="onLogout()"><img src="../../assets/images/user-keto.png" height="22"> <span class="menu-title">LOGOUT</span></a>
+  </div>

@@ -1,0 +1,14 @@
+<div class="card-container">
+    <img [src]="recipe.imagePath" alt="photo" class="round"/>
+    <h3>{{recipe.name}}</h3>
+    <p>{{recipe.description}}</p>
+    <p>${{recipe.price}}</p>
+
+    <div class="buttons">
+
+            <button mat-flat-button color="primary" (click)="onAddToProductsList()"(click)="onAddToShoppingList()" (click)="onSwitchcompraMode()">{{ isCompraMode ? 'Ajouter' : 'Ajoutee!' }}</button>
+            
+
+    </div>
+</div>
+

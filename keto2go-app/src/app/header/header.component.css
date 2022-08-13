@@ -1,0 +1,170 @@
+.navbar-header{
+    background-color: #000000;
+    
+}
+.navbar-brand{
+    color: #ffffff;
+    margin-top:-10px;
+    vertical-align: middle;
+}
+.navbar-brand:focus { 
+    color: #ffffff;
+}
+.navbar-brand:hover { 
+    color: #ffffff;
+}
+.navbar-collapse{
+    background-color: #111111;
+
+}
+
+
+button.navbar-toggle{
+    background-color: #fff;
+    color: #000000;
+}
+
+.navbar .navbar-nav .open .dropdown-menu {
+	background: #faf7fd;
+	border-radius: 1px;
+	border-color: #faf7fd;
+	box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    color: #000000;
+    margin-top: 20px;
+   
+}
+
+.icon-bar{
+    background-color: #000000;
+}
+
+a{
+    color:#ffffff;
+    text-decoration:none;
+}
+
+a:focus,a:hover{
+    color:#000000;
+    
+}
+
+
+ .dropdown-menu {
+    margin-top: 18px;
+    margin-left: -60px;
+    margin-right: 20px;
+ }
+
+ .mobileD {
+    margin-top: 18px;
+    margin-left: -130px;
+  
+ }
+
+ .dropdown .active .dropdown-menu {
+    color: #000000;
+    margin-top: 20px;
+ }
+
+ .dropdown-menu .active>a{
+    color: #000000;
+    background-color: #ffffff;
+    margin-top: 20px;
+ } 
+.btn-light{
+    color: #000000;
+    background-color: #ffffff;
+}
+.btn-outline-light{
+    margin-top:10px;
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #000000;
+    border-radius: 15px;
+    
+}
+.logo-image img {
+    margin-top:-20px;
+    vertical-align: middle;
+}
+li {
+    list-style-type: none;
+}
+
+li.chico:hover{
+    color: #ffff;
+}
+
+
+
+
+
+
+
+
+/* Place the navbar at the bottom of the page, and make it stick */
+.navbar-bottom {
+    background-color: #000000;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center; 
+    z-index: 999;
+    
+  }
+  
+  /* Style the links inside the navigation bar */
+  .navbar-bottom a {
+    
+    list-style: none;
+    display: inline-block;;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-top: -10px;
+    margin-bottom: -10px;
+   
+    
+
+  }
+  
+  /* Change the color of links on hover */
+  .navbar-bottom a:hover {
+    background-color: #ddd;
+    color: black;
+
+  }
+  
+  /* Add a color to the active/current link */
+  .navbar-bottom a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  .fa-icon{
+
+    font-size: 44px;
+  }
+
+  .navbar-bottom .menu-title {
+    display: block;
+    margin-top: 0px;
+    font-size: 10px;
+  }
+
+
+  .cart-image{
+
+    margin-top:-5px;
+    vertical-align: middle;
+
+  }
+
+  .badgets{
+
+    background-color: #333130;
+    border-radius: 10px 10px 10px 10px;
+    padding: 5px 7px 5px 10px;
+   
+  }

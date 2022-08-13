@@ -1,0 +1,22 @@
+.box-stats{
+    padding:20px 20px 20px 20px;
+    font-size: 20px;
+    background-color: #fafafa;
+    border: 1px solid #e1e8ed;
+   
+}
+
+.total-precio{
+    text-align:center;
+    font-size:20px;
+}
+
+.total-precio-title{
+    text-align:center;
+    font-size:16px;
+}
+
+.btn-lg{
+    width:100%;
+    background-color: #000000;
+}

@@ -1,0 +1,55 @@
+<div class="row menu-back" >
+  <div class="col-xs-4">
+
+  </div>
+  <div class="col-xs-4" >
+    
+      <h1 class="text-center"><b>SHOPPING CART</b></h1>
+  </div>
+  <div class="col-xs-4">
+
+  </div>
+</div>
+<hr>
+
+<div class="col-xs-12">
+
+  <ul class="list-group">
+    <a
+      class="list-group-item"
+      style="cursor: pointer"
+      *ngFor="let product of (products | async).products; let i = index"
+      (click)="onEditItem(i)"
+      (click)="calcCartTotal()"
+    >
+      {{ product.name }} ({{ product.amount }}) ({{ product.price }})
+  
+    </a>
+  </ul>
+  <p *ngIf="produ.length === 0" class="alert alert-info">Your Cart is Empty.</p>
+
+
+</div>
+
+<div class="row">
+  
+
+  <div class="col-xs-12" >
+    <hr>
+    <app-products-edit></app-products-edit>
+    <hr>
+  </div>
+</div>
+
+<div class="row box-stats">
+
+  <div class="col-xs-12 ">
+    <h1 class="total-precio-title">Produits: {{produ.length}}</h1>
+    <h1 class="total-precio"><strong>Total</strong> {{ cartTotal | currency:'USD' }}</h1>
+
+    <button type="button" class="btn btn-primary btn-lg" (click) ="onBuy()">Payer</button>
+
+  </div>
+  <hr>
+  <hr>
+</div>
